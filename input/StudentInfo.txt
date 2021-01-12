@@ -1,0 +1,20 @@
+1,Tara,Seal,T_SEAL@encs.concordia.ca,29683852,000026,F,Winter 2019
+2,Tara,Seal,T_SEAL@encs.concordia.ca,29683852,000026,A,Fall 2019
+3,Tom,Joe,Tom@encs.concordia.ca,29683853,000026,A,Fall 2019
+4,Bob,Sean,Bob@encs.concordia.ca,29683854,000035,A,Fall 2019
+5,Julie,Dans,Julie@encs.concordia.ca,29683855,000055,A,Winter 2019
+6,John,Peters,John@encs.concordia.ca,29683856,000055,A, Winter 2019
+7,Alex,Lealy,Alex@encs.concordia.ca,29683857,000057,A,Winter 2019
+8,Trina,Fan,Trina@encs.concordia.ca,29683858,000057,C,Winter 2019
+9,Trisha,Tan,Trisha@encs.concordia.ca,29683859,000092,D,Fall 2019
+10,Molly,Jackson,Molly@encs.concordia.ca,29683860,000092,F,Fall 2019
+11,Patricia,Michaels,Patricia@encs.concordia.ca,29683861,000092,A,Fall 2019
+12,Tara,Seal,T_SEAL@encs.concordia.ca,29683852,000057,F,Winter 2019
+13,Tara,Seal,T_SEAL@encs.concordia.ca,29683852,000055,A,Fall 2019
+14,Ted,Jones,T_JONES@encs.concordia.ca,49683851,005484,A,Fall 2019
+15,Fank,Ben,B_FRANK@encs.concordia.ca,49683852,005484,A,Fall 2019
+16,Andres,Wilson,A_WILSON@encs.concordia.ca,49683853,005484,A,Fall 2019
+17,Anthony,David,A_DAVID@encs.concordia.ca,49683854,005484,A,Fall 2019
+18,Fred,Davis,F_DAVIS@encs.concordia.ca,49683856,005484,A,Fall 2019
+19,Marilyn,Madison,m_madison@encs.concordia.ca,49683821,005482,A,Fall 2019
+20,Teddy,Frank,t_frank@encs.concordia.ca,49683826,005482,A,Fall 2019

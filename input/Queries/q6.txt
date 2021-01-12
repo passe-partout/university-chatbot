@@ -1,0 +1,31 @@
+    def querySix(self, firstName, lastName):
+        theFirstName = str(firstName)
+        theLastName = str(lastName)
+        theTriples = self.graph.query(
+            """SELECT DISTINCT ?allTopics ?topicURL
+               WHERE 
+               {
+               {?s  <http://xmlns.com/foaf/0.1/firstName> \"%s\"}
+               {?s  <http://xmlns.com/foaf/0.1/lastName> \"%s\"}
+               {?s  <http://focu.io/schema#enrolledIn> ?blankNode}
+               {?blankNode <http://focu.io/schema#gotA>|<http://focu.io/schema#gotB>|<http://focu.io/schema#gotC>|<http://focu.io/schema#gotD> ?courseID}
+               {?blankNode  <http://focu.io/schema#takesCourse> ?courseID}
+               {?courseID  <http://xmlns.com/foaf/0.1/topic> ?allTopics}
+               {?allTopics <http://focu.io/schema#topicLink> ?topicURL}
+               }
+               """ % (theFirstName, theLastName))
+
+        allTriples = open("output/QueryResults/q6-out.txt", "w")
+        print("Displaying all topics that %s %s is familiar with based off his/her completed and passed courses:" % (
+        theFirstName, theLastName))
+        for row in theTriples.result:
+            hashIndex1 = (str(row[0])).index("#") + 1
+            topicName = str(row[0][hashIndex1:])
+            topicURL = str(row[1])
+            print("Topic is %s and URL is: %s" % (topicName, topicURL))
+            allTriples.write("Topic is %s and URL is: %s" % (topicName, topicURL))
+            allTriples.write("\n")
+
+        print("The output was also generated in output/QueryResults/q6-out.txt")
+
+        allTriples.close()

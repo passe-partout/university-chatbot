@@ -1,0 +1,13 @@
+Topic is Canada and URL is: http://dbpedia.org/resource/Canadian_poetry
+Topic is Canada and URL is: http://dbpedia.org/resource/Canada
+Topic is property_income and URL is: http://dbpedia.org/resource/Property_income
+Topic is capital_gains and URL is: http://dbpedia.org/resource/Capital_gain
+Topic is federal_income_tax and URL is: http://dbpedia.org/resource/Income_tax_in_the_United_States
+Topic is Canadian and URL is: http://dbpedia.org/resource/Canadian_Armed_Forces
+Topic is Canadian and URL is: http://dbpedia.org/resource/Canada
+Topic is Canadian and URL is: http://dbpedia.org/resource/Television_in_Canada
+Topic is Canadian and URL is: http://dbpedia.org/resource/Canadians
+Topic is Canadian and URL is: http://dbpedia.org/resource/Cinema_of_Canada
+Topic is Canadian and URL is: http://dbpedia.org/resource/Canadian_poetry
+Topic is accounting and URL is: http://dbpedia.org/resource/Accounting
+Topic is accounting_principles and URL is: http://dbpedia.org/resource/Accounting

@@ -1,0 +1,49 @@
+    def queryFour(self, firstName, lastName):
+        theFirstName = str(firstName)
+        theLastName = str(lastName)
+        theTriples = self.graph.query(
+            """SELECT ?blankNode ?p ?o
+               WHERE 
+               {
+               {?s  <http://xmlns.com/foaf/0.1/firstName> \"%s\"}
+               {?s  <http://xmlns.com/foaf/0.1/lastName> \"%s\"}
+               {?s  <http://focu.io/schema#enrolledIn> ?blankNode}
+               {?blankNode  <http://focu.io/schema#takesCourse> ?courseID}
+               {?blankNode  ?p ?courseID}
+               {?courseID  <http://xmlns.com/foaf/0.1/name> ?o}
+               FILTER (?p != <http://focu.io/schema#takesCourse>)
+               }
+               """ % (theFirstName, theLastName))
+
+        results = {}
+        theRow = {}
+
+        allTriples = open("output/QueryResults/q4-out.txt", "w")
+
+        for row in theTriples.result:
+            allTriples.write(str(row))
+            theValues = ["temp", "temp", "temp"]
+            theRow[0] = str(row[0])
+            if "got" in str(row[1]):
+                theValues[0] = str(row[1])
+                theValues[2] = str(row[2])
+                if self.isKeyinDict(results, row[0]):
+                    self.replaceKeyInDic(results, row[0], theValues[0], theValues[2])
+                else:
+                    results[row[0]] = tuple(theValues)
+            elif "Semester" in str(row[1]):
+                theValues[1] = str(row[1])
+                theValues[2] = str(row[2])
+                if self.isKeyinDict(results, row[0]):
+                    self.replaceKeyInDic(results, row[0], theValues[1], theValues[2])
+                else:
+                    results[row[0]] = tuple(theValues)
+
+        for key in results:
+            print("This student took %s in %s and %s" % (results[key][2], results[key][1], results[key][0]))
+            allTriples.write("This student took %s in %s and %s" % (results[key][2], results[key][1], results[key][0]))
+            allTriples.write("\n")
+
+        print("The output was also generated in output/QueryResults/q4-out.txt")
+
+        allTriples.close()

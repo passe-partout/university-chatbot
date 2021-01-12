@@ -1,0 +1,4 @@
+1,Tara,Seal,T_SEAL@encs.concordia.ca,29683852,000026,F,Winter 2019
+2,Tara,Seal,T_SEAL@encs.concordia.ca,29683852,000026,A,Fall 2019
+3,Tom,Joe,Tom@encs.concordia.ca,29683853,000026,A,Fall 2019
+4,Bob,Sean,Bob@encs.concordia.ca,29683854,000028,A,Fall 2019

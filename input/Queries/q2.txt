@@ -1,0 +1,54 @@
+    def queryTwo(self):
+        allTriples = open("output/QueryResults/q2-out.txt", "w")
+
+        # To get the number of students
+        theTriples = self.graph.query(
+            """SELECT (COUNT(*) as ?TriplesStudents)
+               WHERE 
+               {
+                  ?s <http://xmlns.com/foaf/0.1/schoolHomepage> ?aUniversity.
+               }""")
+
+        for row in theTriples:
+            print("Total number of students: %s" % row)
+            allTriples.write("Total number of students: %s" % row)
+
+        # To get the number of courses
+        theTriples = self.graph.query(
+            """SELECT (COUNT(*) as ?TriplesCourses)
+               WHERE {
+                  {?s <https://schema.org/courseCode> ?courseCode.}
+               }""")
+
+        for row in theTriples:
+            print("Total number of courses: %s" % row)
+            allTriples.write("Total number of courses: %s" % row)
+
+        # To get the number of topics
+        theTriples = self.graph.query(
+            """SELECT (COUNT(*) as ?TriplesTopics)
+               WHERE {
+                  {?s  <http://focu.io/schema#topicLink> ?topicName.}
+               }""")
+
+        for row in theTriples:
+            print("Total number of topics: %s" % row)
+            allTriples.write("Total number of topics: %s" % row)
+
+        theTriples = self.graph.query(
+            """SELECT (COUNT(*) as ?TriplesTotal)
+               WHERE
+               {
+               {?s1 <http://xmlns.com/foaf/0.1/schoolHomepage> ?o1.}
+               UNION
+               {?s2 <http://focu.io/schema#courseSubject> ?o2.}
+               UNION
+               {?s3 <http://focu.io/schema#topicLink> ?o3.}
+               }
+               """)
+
+        for row in theTriples:
+            print("The total number of triples for students, courses, and topics are %s" % row)
+
+        print("The output was also generated in output/QueryResults/q2-out.txt")
+        allTriples.close()

@@ -1,0 +1,15 @@
+    def queryOne(self):
+        theTriples = self.graph.query(
+            """SELECT (COUNT(*) as ?TriplesTotal)
+               WHERE {
+                  ?s ?p ?o.
+               }""")
+
+        allTriples = open("output/QueryResults/q1-out.txt", "w")
+
+        for row in theTriples:
+            print("The total number of triples are %s" % row)
+            allTriples.write("Total number of triples: %s" % row)
+
+        print("The output was also generated in output/QueryResults/q1-out.txt")
+        allTriples.close()

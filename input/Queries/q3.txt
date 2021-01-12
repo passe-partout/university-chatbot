@@ -1,0 +1,29 @@
+    def queryThree(self, name, code):
+        courseSubject = str(name)
+        courseCode = str(code)
+        theTriples = self.graph.query(
+            """SELECT ?topicName ?topicURL
+               WHERE 
+               {
+               {?s  <https://schema.org/courseCode> \"%s\".}
+               {?s  <http://focu.io/schema#courseSubject> \"%s\".}
+               {?s <http://xmlns.com/foaf/0.1/topic> ?topicName.}
+               {?topicName <http://focu.io/schema#topicLink> ?topicURL.}
+               }
+               """ % (courseCode, courseSubject))
+        numberOfTriples = 0
+
+        allTriples = open("output/QueryResults/q3-out.txt", "w")
+
+        for row in theTriples.result:
+            print("%s is the label for the URL %s" % row)
+            numberOfTriples = numberOfTriples + 1
+            allTriples.write(str(row))
+            allTriples.write("\n")
+
+        numberOfTopics = numberOfTriples
+        print("Total number of topics: %s" % numberOfTopics)
+        allTriples.write("Total number of topics: %s" % numberOfTopics)
+        allTriples.write("\n")
+        print("The output was also generated in output/QueryResults/q3-out.txt")
+        allTriples.close()

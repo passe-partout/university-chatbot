@@ -1,0 +1,3 @@
+(rdflib.term.URIRef('http://www.example.org#accounting'), rdflib.term.URIRef('http://dbpedia.org/resource/Accounting'))
+(rdflib.term.URIRef('http://www.example.org#accounting_principles'), rdflib.term.URIRef('http://dbpedia.org/resource/Accounting'))
+Total number of topics: 2

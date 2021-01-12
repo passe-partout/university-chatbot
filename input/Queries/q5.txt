@@ -1,0 +1,25 @@
+    def queryFive(self, topic):
+        theTopic = "<http://www.example.org#" + str(topic + ">")
+        theTriples = self.graph.query(
+            """SELECT ?studentID
+               WHERE 
+               {
+               {?s  <http://focu.io/schema#enrolledIn> ?blankNode}
+               {?blankNode  <http://focu.io/schema#takesCourse> ?courseID}
+               {?blankNode <http://focu.io/schema#gotA>|<http://focu.io/schema#gotB>|<http://focu.io/schema#gotC>|<http://focu.io/schema#gotD> ?courseID}
+               {?courseID <http://xmlns.com/foaf/0.1/topic> %s}
+               {?s  <http://xmlns.com/foaf/0.1/account> ?studentID}
+               }
+               """ % theTopic)
+
+        allTriples = open("output/QueryResults/q5-out.txt", "w")
+
+        for row in theTriples.result:
+            print("Student ID %s is familiar with the topic " % row, end='')
+            allTriples.write("Student ID %s is familiar with the topic " % row)
+            print(topic + ".")
+            allTriples.write(topic + ".")
+            allTriples.write("\n")
+
+        print("The output was also generated in output/QueryResults/q5-out.txt")
+        allTriples.close()

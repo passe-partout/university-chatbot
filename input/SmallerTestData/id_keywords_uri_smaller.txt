@@ -1,0 +1,12 @@
+000026 accounting principles http://dbpedia.org/resource/Accounting
+000026 accounting http://dbpedia.org/resource/Accounting
+000026 JMSB http://dbpedia.org/resource/John_Molson_School_of_Business
+000026 ACCO http://dbpedia.org/resource/Acre,_Israel
+000027 accounting http://dbpedia.org/resource/Accounting
+000027 financial statements http://dbpedia.org/resource/Financial_statement
+000027 JMSB http://dbpedia.org/resource/John_Molson_School_of_Business
+000027 ACCO http://dbpedia.org/resource/Acre,_Israel
+000028 accounting http://dbpedia.org/resource/Accounting
+000028 ACCO http://dbpedia.org/resource/Acre,_Israel
+000028 JMSB http://dbpedia.org/resource/John_Molson_School_of_Business
+000035 financial reporting http://dbpedia.org/resource/Financial_statement

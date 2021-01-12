@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+
+//This is used for query 1
+   <category>
+      <pattern> WHAT IS * ABOUT </pattern>
+      <template>question1 <star/></template>
+   </category>
+   <category>
+      <pattern> WHAT IS THE COURSE * ABOUT </pattern>
+      <template>
+      <srai>WHAT IS <star/> ABOUT </srai>
+      </template>
+   </category>
+   <category>
+      <pattern> WHAT IS COURSE * ABOUT </pattern>
+      <template>
+      <srai>WHAT IS <star/> ABOUT </srai>
+      </template>
+   </category>
+
+//This is used for query 2
+   <category>
+      <pattern> WHICH COURSES DID * TAKE </pattern>
+      <template>question2 <star/></template>
+   </category>
+      <category>
+      <pattern> WHAT COURSES DID * TAKE </pattern>
+      <template>
+      <srai>WHICH COURSES DID <star/> TAKE </srai>
+      </template>
+   </category>
+   <category>
+      <pattern> WHAT COURSES DID THE STUDENT * TAKE </pattern>
+      <template>
+      <srai>WHICH COURSES DID <star/> TAKE </srai>
+      </template>
+   </category>
+   <category>
+      <pattern> WHAT COURSES DID STUDENT * TAKE </pattern>
+      <template>
+      <srai>WHICH COURSES DID <star/> TAKE </srai>
+      </template>
+   </category>
+   <category>
+      <pattern> WHICH COURSES DID THE STUDENT * TAKE </pattern>
+      <template>
+      <srai>WHICH COURSES DID <star/> TAKE </srai>
+      </template>
+   </category>
+   <category>
+      <pattern> WHICH COURSES DID STUDENT * TAKE </pattern>
+      <template>
+      <srai>WHICH COURSES DID <star/> TAKE </srai>
+      </template>
+   </category>
+      <category>
+      <pattern> WHICH COURSES HAS STUDENT * TAKEN </pattern>
+      <template>
+      <srai>WHICH COURSES DID <star/> TAKE </srai>
+      </template>
+   </category>
+
+//This is used for query 3
+   <category>
+      <pattern> WHICH COURSES COVER * </pattern>
+      <template>question3 <star/></template>
+   </category>
+   <category>
+      <pattern> WHAT ARE THE COURSES THAT COVER * </pattern>
+      <template>
+      <srai>WHICH COURSES COVER <star/></srai>
+      </template>
+   </category>
+   <category>
+      <pattern> WHAT COURSE COVERS * </pattern>
+      <template>
+       <srai>WHICH COURSES COVER <star/></srai>
+      </template>
+   </category>
+      <category>
+      <pattern> WHAT COURSES COVER * </pattern>
+      <template>
+      <srai>WHICH COURSES COVER <star/></srai>
+      </template>
+   </category>
+
+//This is used for query 4
+   <category>
+      <pattern> WHO IS FAMILIAR WITH * </pattern>
+      <template>question4 <star/></template>
+   </category>
+   <category>
+      <pattern> WHICH STUDENT IS FAMILIAR WITH * </pattern>
+      <template>
+      <srai>WHO IS FAMILIAR WITH <star/></srai>
+      </template>
+   </category>
+   <category>
+      <pattern> WHO FAMILIAR WITH * </pattern>
+      <template>
+       <srai>WHO IS FAMILIAR WITH <star/></srai>
+      </template>
+   </category>
+       <category>
+      <pattern> IS FAMILIAR WITH * </pattern>
+      <template>
+      <srai>WHO IS FAMILIAR WITH <star/></srai>
+    </template>
+    </category>
+</aiml>
